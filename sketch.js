@@ -15,5 +15,15 @@ function draw() {
   else {
     line(x, y + spacing, x + spacing, y);
   }
+  
+  x = x + spacing;
+  if (x > width - spacing) {
+    x = 0;
+    y = y + spacing;
+  }
+
+  if (y > height - spacing) {
+    throw new Error('vége a rajzolásnak...!');
+  }
 
 }
