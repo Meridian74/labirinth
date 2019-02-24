@@ -110,16 +110,18 @@ function drawBorders() {
     y = y + spacing;
   }
   y = y - spacing;
-  while (x > 0) {
+  while (x >= 0) {
     wallType3();
     wallType4();
     x = x - spacing;
   }
-  while (y > 0) {
+  x = 0;
+  while (y >= 0) {
     wallType1();
     wallType3();
     y = y - spacing;
   }
+  y = 0;
 }
 
 // falak vonalainak típusai
