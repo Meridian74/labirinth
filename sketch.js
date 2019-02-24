@@ -98,22 +98,23 @@ function complexWall() {
 // zár keret megrajzolása
 function drawBorders() {
   x = 0; y = 0;
-  while (x < width - spacing) {
+  while (x < width) {
     wallType1();
     wallType2();
     x = x + spacing;
   }
-  while (y < height - spacing) {
+  x = x - spacing;
+  while (y < height) {
     wallType2();
     wallType4();
     y = y + spacing;
   }
+  y = y - spacing;
   while (x > 0) {
     wallType3();
     wallType4();
     x = x - spacing;
   }
-  x = 0;
   while (y > 0) {
     wallType1();
     wallType3();
